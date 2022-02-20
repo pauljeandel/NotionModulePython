@@ -1,2 +1,2 @@
-# NotionModulePython
-Simple python integration of the notion API
+# Simple python integration of the notion API
+
