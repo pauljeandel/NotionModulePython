@@ -5,7 +5,7 @@ This project is a simple python integration of the notion API
 
 ## Initialize
 
-`You can specify a notion version like this : Notion('YOUR_SECRET_TOKEN',2021-08-16)`
+`You can specify a notion version like this : Notion('YOUR_SECRET_TOKEN','2021-08-16')`
 
 ```python
 import NotionModule
