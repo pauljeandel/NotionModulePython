@@ -37,6 +37,14 @@ content = GetPageContent( page ,size )
 block = instance.GetBlock('BLOCK_ID')
 ```
 
+## Retreive sub-blocks
+
+`This method return an array NotionBlock object.`
+
+```python
+block = instance.GetSubBlock('PARENT_BLOCK_ID')
+```
+
 ## Retreive a database
 
 `This method return an array of NotionPage objects`
@@ -62,5 +70,10 @@ has_children : true if the page have childrens
 ## NotionBlock
 
 ```
-TODO
+id : id of the block
+type : type of block
+created_by : json user object
+created_time : created time of the block
+has_children : true if the block have children
+json_content : if exists, json content of the block
 ```
