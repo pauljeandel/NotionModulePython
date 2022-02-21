@@ -1,37 +1,66 @@
-## Welcome to GitHub Pages
+This project is a simple python integration of the notion API
 
-You can use the [editor on GitHub](https://github.com/pauljeandel/NotionModulePython/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Get Started
 
-### Markdown
+## Initialize
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+```python
+import NotionModule
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+instance = NotionModule.Notion('YOUR_SECRET_TOKEN')
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+## Retreive a page
 
-### Jekyll Themes
+`This method return a NotionPage object.`
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pauljeandel/NotionModulePython/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```python
+page = instance.GetPage('PAGE_ID')
+```
 
-### Support or Contact
+## Retreive the page content
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+`This method return an array of NotionBlock objects.`
+
+```python
+page = instance.GetPage('PAGE_ID')
+size = 100
+content = GetPageContent( page ,size )
+```
+
+## Retreive a block
+
+`This method return a NotionBlock object.`
+
+```python
+block = instance.GetBlock('BLOCK_ID')
+```
+
+## Retreive a database
+
+`This method return an array of NotionPage objects`
+
+```python
+size = 100
+database = instance.GetDatabase('DATABASE_ID',size)
+```
+
+# Objects properties
+
+## NotionPage
+
+```
+id : id of the page
+name : title of the page
+properties : json containing all the properties of the page
+created_by : json user object
+url : url of the page
+has_children : true if the page have childrens
+```
+
+## NotionBlock
+
+```
+TODO
+```
