@@ -65,10 +65,6 @@ response = instance.DoGetRequest(url)
 
 data = 'json_data'
 response = instance.DoPostRequest(url,data)
-
-# you can access the headers directly using :
-print(instance.GetHeaders)
-print(instance.PostHeaders)
 ```
 
 ## Access headers
