@@ -55,6 +55,25 @@ block = instance.GetSubBlock('PARENT_BLOCK_ID')
 size = 100
 database = instance.GetDatabase('DATABASE_ID',size)
 ```
+# Custom requests
+
+## Execute requests
+You can execute custom requests using these methods :
+```python
+url = 'URL'
+response = instance.DoGetRequest(url)
+
+data = 'json_data'
+response = instance.DoPostRequest(url,data)
+```
+
+## Access headers
+You can access the headers directly using :
+```python
+print(instance.GetHeaders)
+print(instance.PostHeaders)
+```
+
 
 # Objects properties
 
